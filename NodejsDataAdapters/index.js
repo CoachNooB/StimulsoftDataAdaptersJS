@@ -57,6 +57,10 @@ function process(command, onResult) {
             var OracleAdapter = require('./OracleAdapter');
             OracleAdapter.process(command, onProcessHandler);
         }
+        else if (command.database == "ODBC") {
+            var InformixAdapter = require('./InformixAdapter');
+            InformixAdapter.process(command, onProcessHandler);
+        }
         else onProcessHandler({ success: false, notice: "Database '" + command.database + "' not supported!" });
     }
 }
