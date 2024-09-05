@@ -6,7 +6,7 @@ exports.process = function (command, onResult) {
     const end = (result) => {
         try {
             if (connection) connection.closeSync();
-            result.adapterVersion = "2024.3.3";
+            result.adapterVersion = "2024.3.4";
             onResult(result);
         } catch (e) {
             console.error('Error during disconnection:', e.message);

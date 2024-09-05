@@ -89,6 +89,7 @@ function getResponse(result) {
   return result;
 }
 function onProcess(onResult, encryptData, result) {
+  console.log(result);
   result.handlerVersion = "2024.3.4";
   result.checkVersion = true;
   result.encryptData = encryptData;
